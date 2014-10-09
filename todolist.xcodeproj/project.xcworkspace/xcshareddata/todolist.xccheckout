@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5B4CE565-7EC8-4681-A434-71FC7CBF9B54</string>
+	<key>IDESourceControlProjectName</key>
+	<string>todolist</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FED81219D9B5018BD34E3597B8E4580A549D87A7</key>
+		<string>https://github.com/ssravi/ios8-todolist-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>todolist.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FED81219D9B5018BD34E3597B8E4580A549D87A7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ssravi/ios8-todolist-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FED81219D9B5018BD34E3597B8E4580A549D87A7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FED81219D9B5018BD34E3597B8E4580A549D87A7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios8-todolist-app</string>
+		</dict>
+	</array>
+</dict>
+</plist>

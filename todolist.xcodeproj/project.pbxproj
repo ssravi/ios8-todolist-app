@@ -14,6 +14,8 @@
 		55858F5119DB1F91000C2B83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55858F5019DB1F91000C2B83 /* Images.xcassets */; };
 		55858F5419DB1F91000C2B83 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55858F5219DB1F91000C2B83 /* LaunchScreen.xib */; };
 		55858F6019DB1F91000C2B83 /* todolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55858F5F19DB1F91000C2B83 /* todolistTests.swift */; };
+		6A6D1CFB19E6EDBF00B5872D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6D1CF919E6EDBF00B5872D /* TableViewCell.swift */; };
+		6A6D1CFC19E6EDBF00B5872D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6D1CFA19E6EDBF00B5872D /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		55858F5919DB1F91000C2B83 /* todolistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55858F5E19DB1F91000C2B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55858F5F19DB1F91000C2B83 /* todolistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistTests.swift; sourceTree = "<group>"; };
+		6A6D1CF919E6EDBF00B5872D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		6A6D1CFA19E6EDBF00B5872D /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				55858F5019DB1F91000C2B83 /* Images.xcassets */,
 				55858F5219DB1F91000C2B83 /* LaunchScreen.xib */,
 				55858F4519DB1F91000C2B83 /* Supporting Files */,
+				6A6D1CF919E6EDBF00B5872D /* TableViewCell.swift */,
+				6A6D1CFA19E6EDBF00B5872D /* TableViewCell.xib */,
 			);
 			path = todolist;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55858F4F19DB1F91000C2B83 /* Main.storyboard in Resources */,
+				6A6D1CFC19E6EDBF00B5872D /* TableViewCell.xib in Resources */,
 				55858F5419DB1F91000C2B83 /* LaunchScreen.xib in Resources */,
 				55858F5119DB1F91000C2B83 /* Images.xcassets in Resources */,
 			);
@@ -216,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55858F4C19DB1F91000C2B83 /* SecondViewController.swift in Sources */,
+				6A6D1CFB19E6EDBF00B5872D /* TableViewCell.swift in Sources */,
 				55858F4819DB1F91000C2B83 /* AppDelegate.swift in Sources */,
 				55858F4A19DB1F91000C2B83 /* FirstViewController.swift in Sources */,
 			);
@@ -341,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = todolist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = todolist/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -409,6 +419,7 @@
 				55858F6519DB1F91000C2B83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55858F6619DB1F91000C2B83 /* Build configuration list for PBXNativeTarget "todolistTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +428,7 @@
 				55858F6819DB1F91000C2B83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,10 @@ var todoItems:[String] = []
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    let reuseIdentifer = "identifier"
+    lazy var sizingCell: TableViewCell? = {
+        return TableViewCell.loadFromNib()
+    }()
 
     @IBOutlet weak var tasksTable: UITableView!
     
@@ -19,6 +23,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        tasksTable.registerNib(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,19 +33,21 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "Cell")
         let todoText = todoItems[indexPath.row]
-        cell.textLabel?.text = todoText
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        var height: CGFloat = 0.0
+        if let cell = sizingCell {
+            height = cell.heightWith(todoText, width: tableView.frame.size.width)
+        }
+        // this should be cached
+        println("height: \(height)")
         
-        var maximumLabelSize:CGSize = CGSizeMake(310, 9999);
-        var expectSize:CGSize = (cell.textLabel?.sizeThatFits(maximumLabelSize))!
-        var height:CGFloat = expectSize.height
         return height
     }
-  
     
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 40
+    }
+  
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return todoItems.count
     }
@@ -50,13 +57,13 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default,reuseIdentifier: "Cell")
+        var cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifer, forIndexPath: indexPath) as TableViewCell
+        
         let todoText = todoItems[indexPath.row]
-        cell.textLabel?.text = todoText
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        cell.populateCell(todoText)
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
+        
         return cell
         
     }
